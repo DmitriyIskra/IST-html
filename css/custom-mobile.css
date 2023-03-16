@@ -1,0 +1,534 @@
+@media (max-width: 375px) {
+    .logo-container {
+        border: 1px solid #BFBFBF;
+        margin: 2vw;
+    }
+
+    .logo-container img {
+        max-height: 27vw;
+    }
+
+}
+
+@media(max-width: 391px) {
+    .service-address {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 960px) {
+    .main-office {
+        padding-top: 5px;
+    }
+
+    .product-text-top table {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .contacts-button {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-right {
+        padding-bottom: 70px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .card-product-promo {
+        padding-bottom: 45xp;
+    }
+
+    .product-right {
+        padding-bottom: 20px;
+    }
+
+    .color-set img {
+        max-height: 35px;
+        max-width: 20vw;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .color-set figcaption {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1366px) {
+    .service-address p {
+        font-size: 0.9rem;
+    }
+
+    .service-find p {
+        margin-bottom: 0px !important;
+    }
+
+    .service-name-head {
+        margin-bottom: 20px;
+    }
+
+    .page-clients p {
+        font-size: 1.0rem;
+    }
+
+
+    .logo-container img {
+        max-width: 12vw;
+    }
+
+    .product-text-top table {
+        margin-bottom: 0px;
+    }
+
+}
+
+@media (max-width: 1087px) {
+
+    .card-product-info p {
+        font-size: 0.9rem;
+    }
+
+    .color-set img {
+        max-width: 20vw;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .product-nav {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .page-product .nav-tabs .nav-link {
+        margin-bottom: 0px;
+    }
+
+    .nav-tabs .nav-link {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-product .nav-tabs .nav-link:first-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-product .nav-tabs .nav-link:last-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+
+}
+
+@media (max-width: 920px) {
+
+    .nav-last {
+        margin-right: 0px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .text-content {
+        margin-top: 15px;
+    }
+
+    .page-about .about-img {
+        padding-left: 0px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .about-top {
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+    }
+
+    .color-set img {
+        max-width: 20vw;
+    }
+
+    .options-right__content {
+        margin-bottom: 24px;
+    }
+
+    .options-right {
+        margin-left: 15px;
+    }
+
+    .product-reviev-title {
+        margin-left: -15px;
+        margin-top: 30px;
+        margin-bottom: 24px;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .about-bottom .text-content {
+        margin-top: 30px;
+    }
+
+    .page-clients p {
+        margin-top: 30px;
+        font-size: 1.0rem;
+    }
+
+    .logo-block {
+        margin-top: 14px;
+    }
+
+    .product-text-top p {
+        font-size: 0.9rem;
+    }
+
+    .page-product .card-body {
+        margin-bottom: 10px;
+    }
+
+    .adress {
+        font-size: 15px;
+    }
+
+    .contact-label {
+        margin-bottom: 0px;
+    }
+
+    .page-contacts {
+        margin-bottom: 60px;
+    }
+
+    .contacts-top {
+        margin-top: 36px;
+    }
+
+    .contacts-adress-block {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacts-adress-block .service-address {
+        margin-bottom: 24px;
+    }
+
+    .news-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: -15px;
+        padding-right: -15px;
+    }
+
+    .news-card {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .page-news .text-content {
+        margin-top: 0px;
+    }
+
+    .page-news .text-muted {
+        font-size: 20px;
+        transform: none;
+    }
+
+    .page-news .about-top {
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+    }
+
+    .contact-button-col {
+        order: 3;
+    }
+
+    .brands-img {
+        display: none;
+
+    }
+
+    .brands-top {
+        padding-bottom: 40px;
+    }
+
+    .brands-bottom {
+        margin-top: 40px;
+    }
+
+    .service-selection .service-address {
+        margin-top: 15px;
+    }
+ 
+    .text-content {
+        margin-top: 36px;
+    }
+
+    .text-content h2 {
+        margin-bottom: 16px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .promo-icons-block {
+        margin-top: 20px;
+        padding-bottom: 70px;
+    }
+
+    .product-reviev-content {
+        margin-top: 24px;
+    }
+
+    .product-text-top {
+        margin-top: 26px;
+        margin-bottom: 105px;
+    }
+
+    .product-reviev__info {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .royal-table {
+        margin-top: 50px;
+    }
+
+    .royal-table-item {
+        max-height: 200px;
+        min-height: 56px;
+        border-top: 1px solid black;
+    }
+
+    .royal-table p {
+        padding-left: 10px;
+        font-size: 1.1rem;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0px;
+    }
+
+    .catalog-tabs .nav-tabs .nav-item .nav-link:first-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .catalog-tabs .nav-tabs .nav-item {
+        min-width: 100%;
+    }
+
+}
+
+@media (max-width: 432px) {
+    .promo-icon {
+        height: 60px;
+        width: 60px;
+        background-color: #4F3324;
+        border-radius: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-mini-img {
+        min-height: auto;
+        max-height: 100%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .de-pag {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .product-nav {
+        margin-bottom: 0px;
+    }
+
+    .product-video-button {
+        width: 100%;
+    }
+
+
+    .desctop-table {
+        display: none;
+    }
+
+    .table-mobile {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .row-ranch {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ranch-col {
+        margin-top: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .ranch-head-top {
+        display: none;
+    }
+
+    .ranch-head-mob {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    }
+
+    .desctop-off {
+        display: block;
+    }
+
+    .ranch-spec-body {
+        width: 100%;
+        min-height: 50px;
+
+    }
+
+    .desctop-max {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+
+    .mobile-off {
+        display: none;
+    }
+
+    .logo-container {
+        border: 1px solid #BFBFBF;
+        margin: 2px;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .h2-hidden {
+        display: none;
+    }
+
+    .service-button {
+        font-size: 1rem;
+        min-height: 40px;
+        width: 75%;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 0px;
+    }
+
+    .custom-scale {
+        transform: scale(1.3);
+    }
+
+}
+
+
+@media (max-width: 960px) {
+
+    .service-button {
+        font-size: 1rem;
+        min-height: 40px;
+        width: 100%;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 27px;
+    }
+
+}
+
+
+@media (max-width: 990px) {
+    .contacts-top {
+        margin-top: 36px;
+    }
+
+    .service-list {
+        margin-top: 15px;
+    }
+
+}
+
+/*Слайдер*/
+
+@media(min-width: 768px) and (max-width: 1087px) {
+
+    .card-product-info .swiper-wrapper {
+        background-color: aquamarine;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .product-carousel {
+        height: 150px;
+    }
+
+    .card-product-info .mySwiper {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .card-product .swiper-slide {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .big-slide-container {
+        vertical-align: middle;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .big-slide-container .swiper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 566px;
+    }
+
+}
+
+@media (min-width: 1088px) and (max-width: 1365px) {
+    .big-slide-container {
+        vertical-align: middle;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .big-slide-container .swiper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 566px;
+    }
+}

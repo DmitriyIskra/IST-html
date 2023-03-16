@@ -1,0 +1,305 @@
+
+
+/*
+.service-list {
+    position: relative;
+}
+*/
+
+/*
+.service-address {
+    border-left: 1px solid #000;
+    padding-left: 16px;
+    margin-bottom: 10px;    
+    font-weight: 400;
+    font-size: 0.9rem;        
+    color: #000000;  
+    margin-right: 10px;
+    width: auto;    
+}
+*/
+
+
+
+/*
+.service-name {
+font-size: 1rem;
+font-family: 'RobotoMedium', Arial, Verdana, Tahoma, sans-serif;
+}
+*/
+
+/*
+.service-button {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 24.22%;    
+    width: 70%;
+    height: 57px;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #fff;
+}
+
+
+.service-button:hover {
+-webkit-appearance: none;
+border: 1px solid #000;
+outline: 0;
+background: linear-gradient(270deg, #000000 21.35%, #686868 100%);
+
+transition: 0.3s;
+border-radius: 0; 
+-webkit-animation: bruh 3s linear infinite;
+animation: bruh 3s linear infinite;
+}
+
+
+.service-cert-img {
+    height: auto;
+    width: 100%;
+    vertical-align: middle;    
+}
+*/
+
+
+
+/*
+@media(max-width: 992px) {
+    .service-button {
+           position: relative;
+           margin-top: 15px;           
+    }
+}
+
+
+@media(max-width: 992px) {
+    .service-address-main {
+           position: relative;
+           margin-top: 10px;           
+    }
+}
+*/
+
+/*
+.brand-logo {
+    width: auto;
+}
+
+
+
+.tabs {
+ list-style: none;
+ background-color: #DEDEDE;
+ border: 1px solid black;    
+ padding-right: 10px;
+ display: flex;
+ align-items: center; 
+}
+
+.tabs__item {
+    background-color: #FFFFFF;    
+    cursor: pointer;
+    border: 1px solid #F1F1F1;    
+}
+
+.tabs__item--active {
+    border: 1px solid grey;
+    background-color: #f1f1f1;
+}
+
+.content {
+    list-style: none;            
+}
+
+.content__item {
+    display: none;    
+}
+
+.content__item--active {
+    display: block;    
+}
+*/
+
+/*
+.tab-button {
+    display: flex;
+    border: none;        
+    height: auto;
+    font-weight: 600;
+    width: 100%;
+    background-color: transparent;    
+    justify-content: flex-start;    
+}
+*/
+
+.scroll-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 200px;    
+    border: 0;    
+    overflow-y: auto;    
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;   
+}
+
+.scroll-container::-webkit-scrollbar{
+    width: 0px;
+}
+
+.dropdown-menu {
+     width: auto;
+     -webkit-box-shadow: 3px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 3px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 3px 4px 8px 0px rgba(34, 60, 80, 0.2);    
+}
+
+.line-form {
+    padding-right: 0;
+}
+
+.card-product-img-new{
+    margin-bottom: 5px;
+  }
+
+
+.main-office p{
+    font-size: large;    
+}
+
+
+.clients {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 920px) {    
+.clients {
+    transform: translateY(-180px);
+    width: 90%;    
+}
+}
+
+
+.clients-logo .col {
+    border: 1px solid #F1F1F1;
+    padding-top: 15px;
+    background-color:#FFFFFF;
+}
+
+.card-product-info-overflow {    
+    max-height: 400px;    
+    overflow-y: scroll;    
+    /* margin-bottom: 20px; */
+}
+
+.card-product-info-overflow::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(0, 0, 0);
+}   
+
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+    background-color: #fff;   
+    border: 2px solid rgb(3, 3, 3);
+}
+
+
+.flex-nav {
+display: flex;
+width: 100%;
+text-align: center;
+margin: 0;
+}
+
+@media (max-width: 920px) {
+    .flex-nav {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        }
+        
+}
+
+/* .table-coffee { 
+    flex-grow: 1;        
+    color: rgb(255, 255, 255);
+    
+    background-color: rgb(61, 60, 60);
+} */
+
+
+
+.coffee-button {
+    flex-grow: 1;        
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 24.22%;    
+    width: 70%;
+    height: 57px;
+    background-color: rgb(116, 85, 69);
+    border: 1px solid #000000;
+    color: #fff;
+}
+
+
+.coffee:hover {
+-webkit-appearance: none;
+outline: 0;
+background: linear-gradient(270deg, #472d07 21.35%, #4f3324 100%);
+transition: 0.3s;
+border-radius: 0; 
+-webkit-animation: bruh 3s linear infinite;
+animation: bruh 3s linear infinite;
+color: rgb(255, 255, 255);
+}
+
+.coffee {
+    background-color: #4f3324;
+    /* background-color: rgb(116, 85, 69); */
+    border-style: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.card-product-img-new {
+    margin-bottom: 0px;
+}
+
+.modal-video-header {
+    background: transparent;
+    height: auto;
+    color: white;
+}
+

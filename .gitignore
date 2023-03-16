@@ -1,0 +1,62 @@
+# настройки PHPStorm
+/.idea/
+
+# системные папки и файлы хостингов и операционных систем
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# текстовые и подобные ресурсы
+*.xml
+*.txt
+*.log
+*.css.map
+
+# картинки, видео и ненужные шрифты
+*.mp4
+*.png
+*.svg
+*.jpg
+/css/fonts/Roboto/
+/css/fonts/Roboto_Condensed/
+
+# архивы, включая многотомные
+*.zip
+*.zip*  
+*.tar
+*.tar*
+*.enc
+*.enc*
+*.gz
+*.gz*
+*.tgz
+*.tgz*
+*.sql
+*.rar
+.hg
+.ftpconfig
+*.doc
+*.docx
+*.pdf
+*.rtf
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.psd
+*.psb
+*.sketch
+core.*
+
+# composer
+composer.phar
+/vendor/
+
+# исключаем всякое от node.js
+node_modules
+bower_components
+.grunt
+.npm
+.env
