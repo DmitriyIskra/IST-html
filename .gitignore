@@ -19,8 +19,8 @@ ehthumbs.db
 *.png
 *.svg
 *.jpg
-/css/fonts/Roboto/
-/css/fonts/Roboto_Condensed/
+!/img/icon*
+!/img/icon/*.svg
 
 # архивы, включая многотомные
 *.zip
