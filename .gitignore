@@ -21,6 +21,7 @@ ehthumbs.db
 *.jpg
 !/img/icon*
 !/img/icon/*.svg
+!/img/catalog-top-*.jpg
 
 # архивы, включая многотомные
 *.zip
