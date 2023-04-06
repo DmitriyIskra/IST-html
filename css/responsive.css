@@ -345,11 +345,7 @@ Navigation
 .mob-search-top {
   left: 45px;
 }
-/*
-.search-bar-form {
-  padding: 10px 7px;
-}
-*/
+
 .search .search-button {
   right: 7px;
 }
@@ -1315,7 +1311,6 @@ footer .row .footer-info {
 @media (max-width: 768px) {
   .promo-icons-block {
       margin-top: 20px;
-/*      padding-bottom: 70px;*/
   }
 
   .product-reviev-content {
