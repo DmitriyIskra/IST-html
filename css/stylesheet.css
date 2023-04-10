@@ -2584,7 +2584,9 @@ width: 100%;
     font-size: 1.2rem;
 }
 
-
+.product-right-description {
+  min-height: 500px;
+}
 
 .product-button {    
   font-size: 1rem;
@@ -3196,7 +3198,8 @@ border-bottom: 1px solid black;
   cursor: pointer;
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
-  cursor: zoom-in; }
+  cursor: zoom-in; 
+}
 
 .mfp-auto-cursor .mfp-content {
   cursor: auto; }
