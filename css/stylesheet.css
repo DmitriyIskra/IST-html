@@ -3189,10 +3189,9 @@ border-bottom: 1px solid black;
 .mfp-ajax-cur {
   cursor: progress; }
 
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -moz-zoom-out;
-  cursor: -webkit-zoom-out;
-  cursor: zoom-out; }
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {  
+    cursor: pointer; 
+}
 
 .mfp-zoom {
   cursor: pointer;
@@ -3486,10 +3485,8 @@ img.mfp-img {
     padding-right: 6px; } }
 
 
-    .image-link {
-      cursor: -webkit-zoom-in;
-      cursor: -moz-zoom-in;
-      cursor: zoom-in;
+    .image-link { 
+      cursor: pointer;
     }
     
     
