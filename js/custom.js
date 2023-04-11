@@ -189,3 +189,21 @@ $(document).ready(function() {
 		fixedContentPos: false
 	});
 });
+
+if(document.querySelector('.selectpicker')) {
+
+  let selectCity = document.querySelector('.selectpicker');
+  
+  selectCity.addEventListener('change', function (e) {
+  
+  var value = selectCity.selectedOptions[0].value;
+  
+  var text = selectCity.selectedOptions[0].text;
+  
+  console.log(value + " " + "это value");
+  
+  console.log(text + " " + "это текст");
+  
+  })
+  
+  }
