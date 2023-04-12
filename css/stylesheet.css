@@ -1891,6 +1891,9 @@ right: 0;
   border-left: 1px solid black;
 }
 
+.service-selection .service-address {
+  min-height: 144px;
+}
 
 /*Навигация*/
 

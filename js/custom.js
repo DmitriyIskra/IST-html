@@ -1,4 +1,6 @@
 
+
+
 /* слайдер продукта */
 var swiper = new Swiper(".mySwiper", {  
   loop: true,  
@@ -50,7 +52,7 @@ swiper.on('click', function () {
   bigSlideContainer.innerHTML = swiper.clickedSlide.innerHTML;
 });
 
-swiper.on('click', function () {    
+swiper.on('slideChangeTransitionEnd', function () {    
   bigSlideContainer.innerHTML = swiper.clickedSlide.innerHTML;
 });
 
@@ -69,9 +71,9 @@ $(document).ready(function () {
 });
 
 
-
+if(document.querySelector('.selectpicker') !== null) {
 $('.selectpicker').selectpicker();
-
+}
 
 /*видео*/
 
@@ -179,31 +181,13 @@ $('#exampleModalCenter').on('hidden.bs.modal', function (event) {
 divFromTable();
 
 
-$(document).ready(function() {
-	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({		
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const form = document.querySelector('.form-mask');
+    const telSelector = form.querySelector('input[type="tel"]');
+    const inputMask = new Inputmask('+7 (999) 999-99-99');  
+    inputMask.mask(telSelector);
+  });
 
-		fixedContentPos: false
-	});
-});
-
-if(document.querySelector('.selectpicker')) {
-
-  let selectCity = document.querySelector('.selectpicker');
   
-  selectCity.addEventListener('change', function (e) {
   
-  var value = selectCity.selectedOptions[0].value;
   
-  var text = selectCity.selectedOptions[0].text;
-  
-  console.log(value + " " + "это value");
-  
-  console.log(text + " " + "это текст");
-  
-  })
-  
-  }

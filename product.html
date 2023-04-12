@@ -597,7 +597,7 @@
            <!--  Call form -->
            <div class="container-formModal">
             <p class="form-top-text"> Перезвоним в удобное для Вас время, просто оставьте ниже Ваши контакты </p>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation form-mask">
              <div class="form-group mb-3">
               <label for="firstName">Ваше имя</label>
               <input type="text" class="form-control" id="firstName" placeholder="Имя" value="" required>
@@ -605,7 +605,8 @@
              </div>
              <div class="form-group mb-3">
               <label for="telephone">Ваш телефон</label>
-              <input type="tel" name="tel" class="form-control" id="telephone" placeholder="+7 (___) ___-__-__" required>
+              <!-- <input type="tel" name="phone" class="form-control" id="telephone" placeholder="+7 (___) ___-__-__" required> -->
+              <input class="form-control input-tel" type="tel"  name="Телефон" placeholder="+7 (___) ___-__-__">
               <div class="invalid-feedback"> Заполните форму </div>
              </div>
              <div class="form-group mb-3">
@@ -674,6 +675,8 @@
 <script src="js/bootstrap-select.min.js"></script>
 <script src="js/main.js"></script> 
 <script src="js/tab.js"></script> 
+<script src="js/just-validate.production.min.js"></script>
+<script defer src="js/inputmask.min.js"></script>
 <script src="js/custom.js"></script> 
 <script src="js/lightbox.js"></script>
 </body>
