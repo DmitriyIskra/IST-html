@@ -3553,6 +3553,10 @@ img.mfp-img {
       max-height: 680px;
     }
 
+    .page-news .card-text {
+      max-height: 115px;
+      overflow-y: hidden;
+    }
     .news-item {
       padding-top: 1%;
       padding-bottom: 1%;    
