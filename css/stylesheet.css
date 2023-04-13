@@ -1892,7 +1892,8 @@ right: 0;
 }
 
 .service-selection .service-address {
-  min-height: 144px;
+  min-height: 145px;
+  max-height: 145px;
 }
 
 /*Навигация*/
