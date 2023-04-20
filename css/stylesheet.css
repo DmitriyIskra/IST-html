@@ -1594,6 +1594,18 @@ Product
   border-radius: 100%;
   transition: all 0.7s ease;
 }
+.page-product .promo-icon.active:before {
+  display: none;
+}
+
+.page-product .promo-icon {
+  cursor: auto;
+}
+
+.page-product .promo-icon a{
+  cursor: default;
+}
+
 .promo-icon.active:hover {
   background-color: rgba(79, 51, 36, 1);
   color: #fff;
