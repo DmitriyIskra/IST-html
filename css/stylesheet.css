@@ -3631,3 +3631,30 @@ img.mfp-img {
       visibility: visible;
   }
  
+  .mySwiper .swiper-slide-thumb-active {
+    border: 3px solid rgba(212, 206, 206, 0.7);
+  }
+
+  .product-image-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    border: 1px solid black;    
+  }
+
+  .product-image-container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;    
+  }
+
+  .product-chemical .row {
+    margin-left: 10px;    
+
+  }
+
+  .product-chemical .pdf-button img{    
+  }

@@ -19,8 +19,7 @@
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,
-    centeredSlides: true,
-    
+    centeredSlides: true,    
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -33,7 +32,7 @@
   // }  
   });
 
-  swiper.on('click', a)
+  
 
 
 $(document).ready(function () {
