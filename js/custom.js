@@ -1,60 +1,39 @@
 
-
-
-/* слайдер продукта */
-var swiper = new Swiper(".mySwiper", {  
-  loop: true,  
-  centeredSlides: true,
-  centeredSlidesBounds: true,
-  grabCursor: true,
-  allowTouchMove: false,
-  spaceBetween: 10,
-  slidesPerView: 3, 
-  slideToClickedSlide: true,
-  centeredSlides: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  controller: {
-    inverse: true,
-  }  
-
   
-});
-
-// большой слайд
- var swiper2 = new Swiper(".mySwiper2", {
-  loop: true,    
-  spaceBetween: 10,
-  centeredSlides: true,  
-  autoHeight: true,
-  // slideToClickedSlide: true,  
-  // slidesPerView: 1,
-  navigation: {    
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // controller: {
+  // три слайда
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slideToClickedSlide: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  // Большой слайд
+  var swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1,
+    centeredSlides: true,
+    
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  //     controller: {
   //   inverse: true,
   // }  
-});
+  });
 
-
-let bigSlideContainer = document.querySelector('.mySwiper2');
-
-
-swiper.on('slideChange', function () {   
-  bigSlideContainer.innerHTML = swiper.activeSlide.innerHTML;  
-});
-
-swiper.on('click', function () {    
-  bigSlideContainer.innerHTML = swiper.clickedSlide.innerHTML;
-});
-
-swiper.on('slideChangeTransitionEnd', function () {    
-  bigSlideContainer.innerHTML = swiper.clickedSlide.innerHTML;
-});
+  swiper.on('click', a)
 
 
 $(document).ready(function () {
