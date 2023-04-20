@@ -1116,6 +1116,10 @@ footer .row .footer-info {
       max-width: 20vw;
   }
 
+  .color-set img {
+    max-width: 9vw;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -1146,7 +1150,14 @@ footer .row .footer-info {
       margin-right: 0px;
   }
 
-
+  .color-set {
+    position: absolute;
+    bottom: 100px;
+  }
+  
+  .color-set img {
+    max-width: 20vw;
+}
 }
 
 @media (max-width: 920px) {
@@ -1175,6 +1186,7 @@ footer .row .footer-info {
       margin-bottom: 40px;
   }
 
+  
   .color-set img {
       max-width: 20vw;
   }
@@ -1319,7 +1331,7 @@ footer .row .footer-info {
 
   .product-text-top {
       margin-top: 26px;
-      margin-bottom: 105px;
+      margin-bottom: 120px;
   }
 
   .product-reviev__info {
@@ -1550,4 +1562,6 @@ footer .row .footer-info {
       align-items: center;
       height: 566px;
   }
+
+  
 }

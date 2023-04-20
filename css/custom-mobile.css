@@ -95,12 +95,9 @@
 @media (max-width: 1087px) {
 
     .card-product-info p {
-        font-size: 0.9rem;
-    }
+        font-size: 0.9rem;    }
 
-    .color-set img {
-        max-width: 20vw;
-    }
+
 
 }
 
@@ -298,10 +295,7 @@
         margin-top: 24px;
     }
 
-    .product-text-top {
-        margin-top: 26px;
-        margin-bottom: 105px;
-    }
+ */
 
     .product-reviev__info {
         margin-top: 40px;

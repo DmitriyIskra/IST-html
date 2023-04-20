@@ -2907,6 +2907,10 @@ margin-top: 100px;
   padding-right: 0px;
 }
 
+/* .page-product .product-button {
+  position: relative;
+} */
+
 .desctop-table {
   display: block;
 }
@@ -2918,6 +2922,10 @@ margin-top: 100px;
 
 .product-text-top {
   margin-bottom: 25%;
+}
+
+.corner-table .product-text-top {
+  margin-bottom:0;
 }
 
 .product-text-top p{
@@ -2943,8 +2951,9 @@ margin-top: 100px;
 
 .color-set {    
   width: 100%;        
-  position: absolute;
-  bottom: 50px;    
+  margin-bottom: 40px;
+  /* position: absolute;
+  bottom: 50px;     */
 }
 
 .color-set img{

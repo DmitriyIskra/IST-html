@@ -1079,11 +1079,11 @@ width: 100%;
     padding-bottom: 10px;    
 }
 
-.color-set {    
+/* .color-set {    
     width: 100%;        
     position: absolute;
     bottom: 50px;    
-}
+} */
 
 .color-set img{
     max-height: 40px;
