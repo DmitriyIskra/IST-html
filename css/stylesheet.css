@@ -3656,5 +3656,44 @@ img.mfp-img {
 
   }
 
-  .product-chemical .pdf-button img{    
+  
+  .balloon { 
+  display: flex;         
+  margin: auto;
+  }
+
+  .baloon__content {    
+    margin-right: 12px;
+    margin-right: 12px;
+  }
+
+  .map_logo {
+    padding: 0 !important;
+    /* margin-left: 15px;     */
+    width: 40px;
+    height: 40px;
+  }
+
+  .map_stars {
+    padding: 0 !important;
+    margin: auto;
+  }
+
+  .balloon span {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .balloon__address {
+    font-size: 12px;
+  }
+
+  .ymaps-2-1-79-balloon__close {
+    display: none;    
+  }
+
+  .ymaps-2-1-79-map-copyrights-promo{
+    display: none;
   }

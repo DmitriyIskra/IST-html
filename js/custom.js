@@ -158,14 +158,72 @@ $('#exampleModalCenter').on('hidden.bs.modal', function (event) {
 
 divFromTable();
 
-
+if(document.querySelector(".form-mask")){
   document.addEventListener("DOMContentLoaded", function(event) {
     const form = document.querySelector('.form-mask');
     const telSelector = form.querySelector('input[type="tel"]');
     const inputMask = new Inputmask('+7 (999) 999-99-99');  
     inputMask.mask(telSelector);
   });
+} 
 
   
+  // Yandex Map
+  if(document.getElementById("map-yandex")){
+  let center = [55.776534451190315,37.54337849781465];
+
+  function init() {
+    let mapIst = new ymaps.Map('map-yandex', {
+      center: center,
+      zoom: 17,
+      controls: []      
+    });
   
+    let placemark = new ymaps.Placemark(center, {
+      balloonContentHeader: 'IST',
+      balloonContentBody: 'Боди балуна',
+      balloonContentFooter: 'Подвал',
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
+      iconImageSize: [40, 40],
+      iconImageOffset: [-19, -44]
+    });
   
+    let placemark1 = new ymaps.Placemark(center, {
+      balloonContent: `
+      <div class="balloon">          
+      <div class="baloon__content">
+      <span>IST TRADE</span>
+      <div class="balloon__address">Хорошeвское ш.32А, <br>этаж 4</div>
+      <img class="map_stars" src="img/stars.png">        	
+      </div>			  
+      <img class="map_logo" src="img/map_logo.png"></div>          
+      </div>
+      `
+    }, 
+    {
+      iconLayout: 'default#image',
+      iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
+      iconImageSize: [40, 40],
+      iconImageOffset: [-19, -44]
+    });
+  
+
+    mapIst.controls.remove('geolocationControl'); // удаляем геолокацию
+    mapIst.controls.remove('searchControl'); // удаляем поиск
+    mapIst.controls.remove('trafficControl'); // удаляем контроль трафика
+    mapIst.controls.remove('typeSelector'); // удаляем тип
+    mapIst.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    mapIst.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    mapIst.controls.remove('rulerControl'); // удаляем контрол правил
+    mapIst.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  
+    // map.geoObjects.add(placemark);
+    mapIst.geoObjects.add(placemark1);
+  
+    placemark1.balloon.open();
+  }
+  
+  ymaps.ready(init);
+}
