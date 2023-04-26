@@ -1959,6 +1959,10 @@ right: 0;
   font-weight: 400;
 }
 
+.table-striped {
+  border-spacing: 5px 0px;
+}
+
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
 background-color: #e7e9eb;
@@ -2073,6 +2077,7 @@ border: none;
 }
 
 .table-img-col img{
+  object-fit: scale-down;  
   width: 100%;
   border: 1px solid black;
   margin-top: 5px;
@@ -2195,6 +2200,8 @@ border: none;
 
 
 .tab-img {
+  object-fit: scale-down;
+  min-height: 220px;
   width: 100%;
   border: 1px solid black;        
 }
@@ -2333,7 +2340,8 @@ width: 100%;
   .logo-container img {
       -o-object-fit: cover;
          object-fit: cover;                
-      max-height: 120px;    
+      max-height: 120px;  
+      min-height: 110px;      
       margin-left: auto;
       margin-right: auto;        
   }
@@ -2934,6 +2942,14 @@ margin-top: 100px;
 
 .product-text-top {
   margin-bottom: 25%;
+}
+
+.item_text {
+  display: -webkit-box;
+-webkit-line-clamp: 8;
+-webkit-box-orient: vertical;
+overflow: hidden;
+min-height: 210px;
 }
 
 .corner-table .product-text-top {
