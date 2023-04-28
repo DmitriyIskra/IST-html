@@ -27,9 +27,6 @@
     thumbs: {
       swiper: swiper,
     },
-  //     controller: {
-  //   inverse: true,
-  // }  
   });
 
   
@@ -149,14 +146,102 @@ $('#exampleModalCenter').on('hidden.bs.modal', function (event) {
       });
       
       table_out.innerHTML = inf_out;
-    }     
-    
-    // console.log('div из таблицы')    
+    }        
       
   }  
 }
 
-divFromTable();
+
+
+document.addEventListener("DOMContentLoaded", function(event) {  
+  divFromTable();
+});
+
+
+
+function divFromTableWmf () {
+
+if (document.getElementById("product_table_transform")) {
+  let table_in = document.getElementById('product_table_transform'),
+      table_out = document.getElementById('for_' + 'product_table_transform'),
+      arr_table = [],
+      header = [],
+      inf_out = "";
+
+  if (table_in && table_out) {
+
+      let r = 0;
+
+      while (row = table_in.rows[r++]) {
+          arr_table[r - 1] = [];
+          let c = 0;
+
+          while (cell = row.cells[c++]) {
+              if (cell.innerHTML.trim()) {
+                  arr_table[r - 1][c - 1] = cell.innerHTML.trim();
+                  if (r == 1) {
+                      header[c - 1] = cell.innerHTML.trim();
+                  }
+              }
+          }
+      }
+
+      inf_out += '<table class="table"><tbody>';
+
+      arr_table.forEach(function (elem, ind) {
+
+          if (ind > 0) {
+
+              if (elem.length > 2) {
+                  let colspan = elem.length - 1,
+                      content_1 = "",
+                      content_2 = "",
+                      content_3 = "";
+
+                  elem.forEach(function (elem2, ind2) {
+
+                      if (ind2 == 0) {
+                          inf_out += '<tr><td colspan="' + colspan + '">' + elem2 + '</td></tr><tr>';
+                      }
+                      else if (ind2 == 1) {
+                          content_1 = '<tr><td style="border-bottom: 1px solid rgb(255, 255, 255); width: 195px;">' + header[ind2] + '</td>';
+                          content_2 += elem2 + '<br /><br />';
+                      }
+                      else {
+                          content_3 += '<tr><td style="border-top: 1px solid rgb(255, 255, 255);">' + header[ind2] + '</td></tr>';
+                          content_2 += elem2 + '<br /><br />';
+                      }
+                  })
+
+                  inf_out += content_1;
+                  inf_out += '<td rowSpan="' + colspan + '">';
+                  inf_out += content_2;
+                  inf_out += '</tr>';
+                  inf_out += content_3;
+              }
+              else {
+                  inf_out += '<tr>';
+                  elem.forEach(function (elem2, ind2) {
+                      inf_out += '<td>' + elem2 + '</td>';
+                  })
+                  inf_out += '</tr>';
+              }
+          }
+
+      })
+
+      inf_out += '</tbody></table>';
+
+      table_out.innerHTML = inf_out;
+  }
+}
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {  
+  divFromTableWmf ();
+});
+
+
 
 if(document.querySelector(".form-mask")){
   document.addEventListener("DOMContentLoaded", function(event) {
