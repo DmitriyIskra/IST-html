@@ -1843,6 +1843,67 @@ footer .row .footer-info:not(:last-child) {
   margin-right: auto;
 }
 
+.page-inprogress {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-inprogress h1 {
+  font-size: 65px;
+  border: none !important;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-error .page-inprogress, .button-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-bottom: 150px;
+  height: 40px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-inprogress {
+  max-width: 792px;
+}
+
+.page-inprogress .button-section {
+  max-width: 792px;
+}
+
+.page-error .button-section {  
+  max-width: 652px;
+}
+
+.page-inprogress .button-section p {
+  font-size: 16px;  
+  padding: auto;
+}
+
+.button-section button {
+  width: 270px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.page-inprogress img {
+  width: 580px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-row {
+  margin-top: 23px;
+  display: flex;
+  flex-direction: column;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -2464,6 +2525,10 @@ width: 100%;
 .table-img img{
   max-height: 200px;
   width: 100%;
+}
+
+.table-img td{
+  background: none;
 }
 
 .options-right {

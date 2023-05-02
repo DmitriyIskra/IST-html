@@ -1162,6 +1162,20 @@ footer .row .footer-info {
   .color-set img {
     max-width: 20vw;
 }
+
+.page-inprogress .button-section {
+  width: 100%;
+  justify-content: center;
+}
+
+.button-section a {
+  width: 100%;
+}
+
+.button-section button {
+  width: 100%;
+}
+
 }
 
 @media (max-width: 920px) {
@@ -1221,6 +1235,7 @@ footer .row .footer-info {
 }
 
 @media (max-width: 540px) {
+
   .about-bottom .text-content {
       margin-top: 30px;
   }
@@ -1401,6 +1416,7 @@ footer .row .footer-info {
 }
 
 @media (max-width: 767px) {
+  
   .product-mini-img {
       min-height: auto;
       max-height: 100%;
