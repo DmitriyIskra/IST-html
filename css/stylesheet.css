@@ -2145,6 +2145,12 @@ border: none;
   margin-bottom: 24px;
 }
 
+.table-img td {
+  background:rgb(255, 255, 255) !important;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .ranch-icon {
   border: 1px solid black;
   display: flex;
@@ -2520,6 +2526,13 @@ width: 100%;
 
 .product-big-img {
   height: 100%;
+}
+
+.table-img {
+  object-fit: scale-down;
+    min-height: 220px;
+    width: 100%;
+    border: 1px solid black;
 }
 
 .table-img img{
