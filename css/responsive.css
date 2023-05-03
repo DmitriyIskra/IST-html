@@ -1037,6 +1037,10 @@ footer .row .footer-info {
       margin-top: 30px;
   }
 
+  .corner-table .product-text-top {
+    margin-bottom: 45%;
+  }
+
 }
 
 @media (max-width: 992px) {
