@@ -868,7 +868,7 @@ Catalog
   display: none;
 }
 .brand-list-tab {
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding: 15px;
 }
 .catalog-top-text {
