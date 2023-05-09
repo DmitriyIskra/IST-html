@@ -3014,7 +3014,7 @@ margin-top: 100px;
 } */
 
 .desctop-table {
-  display: block;
+  display: inline-table;
 }
 
 
@@ -3799,8 +3799,4 @@ img.mfp-img {
 
   .ymaps-2-1-79-map-copyrights-promo{
     display: none;
-  }
-
-  .bx-catalog-element h1 {
-    padding-left: 20px;
   }
