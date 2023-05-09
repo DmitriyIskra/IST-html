@@ -3749,9 +3749,14 @@ img.mfp-img {
     width: 100%;    
   }
 
+  .product-chemical .product-image-container img {
+    object-fit: scale-down;
+    max-height: 540px;
+  }
+
   .product-chemical .row {
     margin-left: 10px;    
-
+    max-height: 540px;
   }
 
   
