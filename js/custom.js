@@ -20,6 +20,7 @@
     spaceBetween: 10,
     slidesPerView: 1,
     centeredSlides: true,    
+    autoHeight: true,    
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -238,7 +239,7 @@ if (document.getElementById("product_table_transform")) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {  
-  divFromTableWmf ();
+  divFromTableWmf();
 });
 
 
