@@ -2581,6 +2581,9 @@ width: 100%;
   margin-right: 40px;
 }
 
+.options-right__content {
+  padding-left: 15px;
+}
 
 .options-right__content p{
   font-weight: bold;
@@ -3111,6 +3114,9 @@ border-bottom: 1px solid black;
 
 /*Слайдер*/
 
+.black-fon {
+  height: inherit;
+}
 
 .big-slide-container .swiper-slide {
   text-align: center;

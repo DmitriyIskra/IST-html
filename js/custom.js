@@ -5,7 +5,7 @@
     loop: true,
     spaceBetween: 10,
     slidesPerView: 3,
-    centeredSlides: true,
+    centeredSlides: true,   
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -20,7 +20,7 @@
     spaceBetween: 10,
     slidesPerView: 1,
     centeredSlides: true,    
-    autoHeight: true,    
+    autoHeight: true,     
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -32,8 +32,7 @@
 
   
 
-
-$(document).ready(function () {
+function tabsForSpecifications() {
   let tabsItem = $('.tabs__item');
   let contentItem = $('.content__item');
 
@@ -44,8 +43,7 @@ $(document).ready(function () {
       $(activeContent).toggleClass("content__item--active");
       $(this).addClass("tabs__item--active")
   });
-});
-
+} 
 
 if(document.querySelector('.selectpicker') !== null) {
 $('.selectpicker').selectpicker();
@@ -154,9 +152,6 @@ $('#exampleModalCenter').on('hidden.bs.modal', function (event) {
 
 
 
-document.addEventListener("DOMContentLoaded", function(event) {  
-  divFromTable();
-});
 
 
 
@@ -239,7 +234,9 @@ if (document.getElementById("product_table_transform")) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {  
+  divFromTable();
   divFromTableWmf();
+  tabsForSpecifications();
 });
 
 
@@ -291,7 +288,7 @@ if(document.querySelector(".form-mask")){
     {
       iconLayout: 'default#image',
       iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
-      iconImageSize: [40, 40],
+      iconImageSize: [40, 40],      
       iconImageOffset: [-19, -44]
     });
   
