@@ -2607,6 +2607,7 @@ width: 100%;
   }
 
   .card-news-text {
+    width: 100%;
     padding-top: 25px;
     padding-bottom: 40px;
     padding-left: 15px;
@@ -2628,6 +2629,12 @@ width: 100%;
   border-top: none;  
   }
 
+  .page-news .pagination {
+    flex-wrap: wrap;
+  }
+
+
+  
 .img-square{
     margin-left: auto;
     margin-right: auto;
@@ -3766,6 +3773,9 @@ img.mfp-img {
     max-height: 540px;
   }
 
+  .product-chemical .product-text-top{
+    margin-bottom: 25px;
+  }
   
   .balloon { 
   display: flex;         

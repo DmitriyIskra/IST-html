@@ -891,6 +891,16 @@ Catalog
 .brand-list-tab p a {
   font-size: 1rem;
 }
+
+.page-catalog .nav-tabs { 
+  border-bottom: 1px solid #000;  
+ margin-bottom: 30px;  
+ flex-direction: column;
+ }  
+ .bx-filter-param-label {    
+ width: 100% !important;
+ }
+
 }
 
 /* ========================================= 
@@ -1220,6 +1230,7 @@ footer .row .footer-info {
   }
 
   .options-right__content {
+      padding-left: 0px;
       margin-bottom: 24px;
   }
 
@@ -1239,6 +1250,10 @@ footer .row .footer-info {
 }
 
 @media (max-width: 540px) {
+
+.img.about-img {
+  object-fit: cover;
+}
 
   .about-bottom .text-content {
       margin-top: 30px;

@@ -1,26 +1,27 @@
 
-  
+
+function initSwiper() {
   // три слайда
   var swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 3,
-    centeredSlides: true,   
+    centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     slideToClickedSlide: true,
-    freeMode: true,
-    watchSlidesProgress: true,
+    // freeMode: true,
+    // watchSlidesProgress: true,
   });
   // Большой слайд
   var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,
-    centeredSlides: true,    
-    autoHeight: true,     
+    centeredSlides: true,
+    autoHeight: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -29,7 +30,7 @@
       swiper: swiper,
     },
   });
-
+}
   
 
 function tabsForSpecifications() {
@@ -262,17 +263,7 @@ if(document.querySelector(".form-mask")){
       controls: []      
     });
   
-    let placemark = new ymaps.Placemark(center, {
-      balloonContentHeader: 'IST',
-      balloonContentBody: 'Боди балуна',
-      balloonContentFooter: 'Подвал',
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
-      iconImageSize: [40, 40],
-      iconImageOffset: [-19, -44]
-    });
-  
+     
     let placemark1 = new ymaps.Placemark(center, {
       balloonContent: `
       <div class="balloon">          
@@ -301,7 +292,7 @@ if(document.querySelector(".form-mask")){
     mapIst.controls.remove('zoomControl'); // удаляем контрол зуммирования
     mapIst.controls.remove('rulerControl'); // удаляем контрол правил
     mapIst.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-  
+    mapIst.options.set({balloonPanelMaxMapArea:'30%'});
     // map.geoObjects.add(placemark);
     mapIst.geoObjects.add(placemark1);
   
