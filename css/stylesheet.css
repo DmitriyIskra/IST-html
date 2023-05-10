@@ -1236,9 +1236,10 @@ main {
   padding: 0;
 }
 .video-block-img .inside-video {
+  cursor: pointer;
   position: absolute;
   width: 100%;
-  height: 470px;
+  height: 470px;  
 }
 .video-block-btn {
   padding-top: 0px;
