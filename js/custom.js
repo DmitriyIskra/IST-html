@@ -273,7 +273,7 @@ if(document.querySelector(".form-mask")){
       <div class="balloon__address">Хорошeвское ш.32А, <br>этаж 4</div>
       <img class="map_stars" src="/img/stars.png">        	
       </div>			  
-      <img class="map_logo" src="img/map_logo.png"></div>          
+      <img class="map_logo" src="/img/map_logo.png"></div>          
       </div>
       `
     }, 
