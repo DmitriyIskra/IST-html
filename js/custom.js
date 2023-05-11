@@ -263,6 +263,7 @@ if(document.querySelector(".form-mask")){
       controls: []      
     });
   
+
      
     let placemark1 = new ymaps.Placemark(center, {
       balloonContent: `
@@ -270,7 +271,7 @@ if(document.querySelector(".form-mask")){
       <div class="baloon__content">
       <span>IST TRADE</span>
       <div class="balloon__address">Хорошeвское ш.32А, <br>этаж 4</div>
-      <img class="map_stars" src="img/stars.png">        	
+      <img class="map_stars" src="/img/stars.png">        	
       </div>			  
       <img class="map_logo" src="img/map_logo.png"></div>          
       </div>
@@ -278,7 +279,7 @@ if(document.querySelector(".form-mask")){
     }, 
     {
       iconLayout: 'default#image',
-      iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
+      // iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
       iconImageSize: [40, 40],      
       iconImageOffset: [-19, -44]
     });
@@ -293,9 +294,9 @@ if(document.querySelector(".form-mask")){
     mapIst.controls.remove('rulerControl'); // удаляем контрол правил
     mapIst.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
     mapIst.options.set({balloonPanelMaxMapArea:'30%'});
-    // map.geoObjects.add(placemark);
-    mapIst.geoObjects.add(placemark1);
-  
+    mapIst.geoObjects.add(placemark1); 
+
+
     placemark1.balloon.open();
   }
   

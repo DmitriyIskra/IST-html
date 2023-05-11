@@ -3846,3 +3846,11 @@ img.mfp-img {
   .ymaps-2-1-79-map-copyrights-promo{
     display: none;
   }
+
+  .bx-filter-param-text{
+    font-size: 1.5rem;
+  }
+
+  .bx-filter .bx-filter-input-checkbox .bx-filter-param-text {
+    text-align: center;
+  }

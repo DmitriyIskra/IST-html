@@ -794,9 +794,14 @@ Content main
 Catalog
 ===========================================*/
 @media (max-width: 1300px) {
-.brand-list-tab p a {
+  .brand-list-tab p a {
     font-size: 1.1rem;
-}
+  }
+  
+  .bx-filter-param-text {
+    font-size: 1.1rem !important;
+  }
+
 }
 @media (max-width: 1200px) {
 .card-body .bottom-card {
