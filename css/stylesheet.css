@@ -1479,6 +1479,7 @@ Catalog
   border-radius: 0;
 }
 .page-catalog .card-deck {
+  width: 100%;
   padding-top: 20px;
   border-top: 1px solid #000;
   margin: 0;
