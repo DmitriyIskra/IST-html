@@ -1495,14 +1495,20 @@ Catalog
   border: 0;
   border-radius: 0;
 }
-.catalog-img {
+.catalog-img {  
   text-align: center;
-
-  /* min-height: 300px;
-    text-align: center;
-    max-height: 300px; */
-
+  min-height: 300px;  
+  max-height: 300px;
+  display: flex;
+  align-items: center;  
 }
+
+.catalog-img img {
+  object-fit: scale-down;
+  min-height: 300px;
+  max-height: 300px;
+}
+
 .catalog-top-wmf {
   background: url("../img/catalog-top-wmf.jpg") no-repeat 50% 0% / cover;
   height: 390px;
@@ -2664,7 +2670,6 @@ width: 100%;
     margin-right: auto;
     padding-left: 0px;
     padding-right: 0px;    
-        /*тест*/
     object-fit: scale-down;
     max-height: 300px;    
     min-height: 300px;
@@ -3853,4 +3858,15 @@ img.mfp-img {
 
   .bx-filter .bx-filter-input-checkbox .bx-filter-param-text {
     text-align: center;
+  }
+
+  
+  .catalog-tabs .nav-link:hover {
+    color: white;
+    background-color: #4F3324;
+  }
+
+  .text-desc {    
+    -webkit-line-clamp: 5;
+    overflow: hidden;    
   }
