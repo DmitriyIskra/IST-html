@@ -1193,6 +1193,8 @@ footer .row .footer-info {
 
 .button-section button {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 }
