@@ -2545,6 +2545,9 @@ width: 100%;
   padding: 0%;
 }   
 
+.product-reviev-content img {
+  width: 100%;
+}
 
 .product-reviev-title {    
   font-size: 24px;
