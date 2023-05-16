@@ -21,7 +21,7 @@ function initSwiper() {
     spaceBetween: 10,
     slidesPerView: 1,
     centeredSlides: true,
-    autoHeight: true,
+    autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -29,6 +29,15 @@ function initSwiper() {
     thumbs: {
       swiper: swiper,
     },
+    breakpoints: {
+      320: {
+        autoHeight: true
+      },
+
+      480: {
+        autoHeight: true
+      }
+    }
   });
 }
   
