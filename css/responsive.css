@@ -1606,7 +1606,7 @@ footer .row .footer-info {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      height: 566px;
+      height: 100%;
   }
 
 }
@@ -1621,8 +1621,7 @@ footer .row .footer-info {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      height: 566px;
+      height: 100%;
   }
-
   
 }
