@@ -424,7 +424,7 @@ label span {
 Sidebar
 ======================================================*/
 .main-sidebar {
-  position: absolute;
+  position: fixed;
   width: 100px;
   height: 100px;
   right: 0;
@@ -1504,6 +1504,7 @@ Catalog
   max-height: 300px;
   display: flex;
   align-items: center;  
+  justify-content: center;
 }
 
 .catalog-img img {
