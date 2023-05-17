@@ -2716,6 +2716,12 @@ width: 100%;
     border-bottom: 1px solid black;
 }
 
+.news-archive {
+  font-size: 12px;
+  font-weight: bold;
+  color: #6c757d!important;
+  padding-left: 10px;
+}
 
 .card-text {
     font-size: 1.0rem;
