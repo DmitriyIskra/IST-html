@@ -2716,10 +2716,11 @@ width: 100%;
     border-bottom: 1px solid black;
 }
 
-.news-archive {
+.news-archive::before {
+  content: "АРХИВНАЯ НОВОСТЬ";
   font-size: 12px;
   font-weight: bold;
-  color: #6c757d!important;
+  color: #6c757d;
   padding-left: 10px;
 }
 
