@@ -1034,6 +1034,7 @@ footer .row .footer-info {
 
   .logo-container img {
       max-height: 27vw;
+      min-height: 90px;
   }
 
 }
@@ -1060,6 +1061,10 @@ footer .row .footer-info {
 }
 
 @media (max-width: 992px) {
+
+  .search-bar-form {
+    padding: 0px 25px;
+  }
 
   .contacts-button {
       width: 100%;
@@ -1259,6 +1264,7 @@ footer .row .footer-info {
 
 @media (max-width: 540px) {
 
+
   .catalog-wrap {
     padding-left: 15px;
   }
@@ -1434,6 +1440,12 @@ footer .row .footer-info {
 }
 
 @media (max-width: 432px) {
+
+  progress-row h1 {
+    font-size: 60px;
+  }
+
+
   .promo-icon {
       height: 60px;
       width: 60px;

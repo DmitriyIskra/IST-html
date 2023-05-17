@@ -3878,6 +3878,11 @@ img.mfp-img {
     background-color: #4F3324;
   }
 
+  .catalog-tabs .nav-item:hover span{
+    color: white;
+  }
+
+
   .catalog-tabs .bx-filter-input-checkbox span:hover {
     color: white;
   }
