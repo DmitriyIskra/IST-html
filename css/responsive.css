@@ -1133,6 +1133,20 @@ footer .row .footer-info {
       margin-bottom: 0px;
   }
 
+.product-carousel {
+  height: 170px;
+}
+
+.page-product .swiper-button-prev {
+  height: 88%;
+  top: 19%;
+}
+
+.page-product .swiper-button-next {
+  height: 88%;
+  top: 19%;
+}
+
 }
 
 @media (max-width: 1087px) {
@@ -1215,6 +1229,11 @@ footer .row .footer-info {
 
 @media (max-width: 991px) {
 
+  .page-news .page-content h1 {
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
+
   .item_text {
     -webkit-line-clamp: inherit;
     min-height: auto;
@@ -1226,6 +1245,12 @@ footer .row .footer-info {
 
   .page-about .about-img {
       padding-left: 0px;
+  }
+
+  .product-chemical .row {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
   }
 
 }
@@ -1435,6 +1460,7 @@ footer .row .footer-info {
   .product-chemical .row {
     margin-left: auto;
     margin-right: auto;
+    height: 100%;
   }
 
 }
