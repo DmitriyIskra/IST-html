@@ -2479,7 +2479,7 @@ width: 100%;
 
 
 .product-carousel .swiper-button-prev, .swiper-button-next {
-  z-index: 2;
+  z-index: 1;
 }
 
 

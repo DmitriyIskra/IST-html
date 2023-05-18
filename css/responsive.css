@@ -1441,10 +1441,13 @@ footer .row .footer-info {
 
 @media (max-width: 432px) {
 
-  progress-row h1 {
+  .progress-row h1 {
     font-size: 60px;
   }
 
+  .page-inprogress h1 {
+    font-size:  58px;
+  }
 
   .promo-icon {
       height: 60px;
