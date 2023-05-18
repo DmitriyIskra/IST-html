@@ -424,7 +424,7 @@ label span {
 Sidebar
 ======================================================*/
 .main-sidebar {
-  position: fixed;
+  position: absolute;
   width: 100px;
   height: 100px;
   right: 0;
@@ -454,8 +454,7 @@ Sidebar
   background: url("../img/logo/ist-logo-sidebar.svg") rgb(79, 51, 36);
   background-repeat: no-repeat;
   background-position: 50% 33%;
-  /* position: relative; */
-  position: fixed;
+  position: relative;
   float: left;
   width: 100px;
   height: 100px;
@@ -474,8 +473,7 @@ Sidebar
   width: 70%;
 }
 .main-sidebar-body {
-  /* position: absolute; */
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 1070px;
   height: 1024px;
