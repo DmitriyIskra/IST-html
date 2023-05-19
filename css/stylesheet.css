@@ -3810,16 +3810,16 @@ img.mfp-img {
 
   .product-chemical .product-image-container img {
     object-fit: scale-down;
-    max-height: 540px;
+    /* min-height: 560px; */
   }
 
   .product-chemical .row {
     margin-left: 10px;    
-    max-height: 540px;
+    max-height: 100%;
   }
 
   .product-chemical .product-text-top{
-    margin-bottom: 25px;
+    margin-bottom: 5px;
   }
   
   .balloon { 

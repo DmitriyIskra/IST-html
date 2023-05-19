@@ -1043,6 +1043,13 @@ footer .row .footer-info {
   .service-address {
       padding-left: 15px;
   }
+
+  .product-chemical .row {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+
 }
 
 @media (max-width: 960px) {
@@ -1283,6 +1290,12 @@ footer .row .footer-info {
 
   .brands-img {
     display: none;
+}
+
+.product-chemical .row {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 }
 
 }

@@ -4,7 +4,7 @@ function initSwiper() {
   // три слайда
   var swiper = new Swiper(".mySwiper", {
     loop: true,
-    spaceBetween: 10,
+    spaceBetween: 30,
     slidesPerView: 3,
     centeredSlides: true,
     navigation: {
@@ -12,8 +12,6 @@ function initSwiper() {
       prevEl: ".swiper-button-prev",
     },
     slideToClickedSlide: true,
-    // freeMode: true,
-    // watchSlidesProgress: true,
   });
   // Большой слайд
   var swiper2 = new Swiper(".mySwiper2", {
@@ -41,6 +39,7 @@ function initSwiper() {
   });
 }
   
+initSwiper();
 
 function tabsForSpecifications() {
   let tabsItem = $('.tabs__item');
@@ -243,13 +242,6 @@ if (document.getElementById("product_table_transform")) {
 }
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {  
-  divFromTable();
-  divFromTableWmf();
-  tabsForSpecifications();
-});
-
-
 
 if(document.querySelector(".form-mask")){
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -304,10 +296,32 @@ if(document.querySelector(".form-mask")){
     mapIst.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
     mapIst.options.set({balloonPanelMaxMapArea:'30%'});
     mapIst.geoObjects.add(placemark1); 
-
-
     placemark1.balloon.open();
   }
   
   ymaps.ready(init);
 }
+
+  function imageEqualheight() { 
+    if(window.screen.width > 560){
+      let productMainIamge = document.querySelector('.product-image-container');
+      let rightContent = document.querySelector('.description-right');
+  
+      productMainIamge.style.height = rightContent.clientHeight  +'px';
+      console.log("левый блок " + productMainIamge.clientHeight + "__" + "правый блок " + rightContent.clientHeight);     
+      console.log("мобилка");
+      console.log(window.clientWidth);
+    }         
+  }  
+
+
+window.addEventListener('resize', function(event){
+  imageEqualheight();
+})
+
+document.addEventListener("DOMContentLoaded", function(event) {  
+  divFromTable();
+  divFromTableWmf();
+  tabsForSpecifications();
+  imageEqualheight();
+});
