@@ -1325,6 +1325,12 @@ main {
   color: #fff;
   margin: 0;
 }
+
+.business-list ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .business-list ul li {
   margin-right: 15px;
 }
@@ -3868,7 +3874,7 @@ img.mfp-img {
   }
 
   .bx-filter .bx-filter-input-checkbox .bx-filter-param-text {
-    text-align: center;
+    text-align: left;
   }
 
   
