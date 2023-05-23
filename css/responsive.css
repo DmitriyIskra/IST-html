@@ -1463,6 +1463,10 @@ footer .row .footer-info {
       margin-right: 0px;
   }
 
+  .catalog-tabs .nav-tabs .nav-item .nav-link {
+    text-align: left;
+  }
+
   .catalog-tabs .nav-tabs .nav-item {
       min-width: 100%;
   }

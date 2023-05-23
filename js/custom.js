@@ -303,15 +303,15 @@ if(document.querySelector(".form-mask")){
 }
 
   function imageEqualheight() { 
-    if(window.screen.width > 560){
-      let productMainIamge = document.querySelector('.product-image-container');
-      let rightContent = document.querySelector('.description-right');
-  
-      productMainIamge.style.height = rightContent.clientHeight  +'px';
-      console.log("левый блок " + productMainIamge.clientHeight + "__" + "правый блок " + rightContent.clientHeight);     
-      console.log("мобилка");
-      console.log(window.clientWidth);
-    }         
+
+    if(document.querySelector('.description-right')){
+      if(window.screen.width > 560){
+        let productMainIamge = document.querySelector('.product-image-container');
+        let rightContent = document.querySelector('.description-right');    
+        productMainIamge.style.height = rightContent.clientHeight  +'px';
+        console.log(window.clientWidth);
+      }         
+    }    
   }  
 
 

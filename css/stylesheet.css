@@ -3900,3 +3900,7 @@ img.mfp-img {
     -webkit-line-clamp: 5;
     overflow: hidden;    
   }
+
+  .bx-filter-block .row .no-gutters .brand-list-tab {
+    padding-bottom: 10px;
+  }
