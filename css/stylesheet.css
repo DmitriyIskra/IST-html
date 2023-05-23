@@ -3904,3 +3904,11 @@ img.mfp-img {
   .bx-filter-block .row .no-gutters .brand-list-tab {
     padding-bottom: 10px;
   }
+
+ .nav-link_a{
+    font-size: 1.7rem;    
+  }
+
+  .description-right {
+    max-height: 580px;
+  }

@@ -1303,6 +1303,9 @@ footer .row .footer-info {
 
 @media (max-width: 540px) {
 
+ .nav-link_a{   
+    white-space: pre-wrap;
+  }
 
   .catalog-wrap {
     padding-left: 15px;
@@ -1499,6 +1502,11 @@ footer .row .footer-info {
       margin-top: 20px;
       margin-bottom: 20px;
   }
+
+  .nav-link_a{   
+    white-space: pre-wrap;
+  }
+
 }
 
 @media (max-width: 767px) {
