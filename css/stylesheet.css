@@ -3090,10 +3090,15 @@ margin-top: 100px;
 
 .item_text {
   display: -webkit-box;
--webkit-line-clamp: 8;
+-webkit-line-clamp: 9;
 -webkit-box-orient: vertical;
 overflow: hidden;
-min-height: 210px;
+min-height: 245px;
+max-height: 245px;
+}
+
+.item_text p{
+  margin-bottom: 0rem;
 }
 
 .corner-table .product-text-top {

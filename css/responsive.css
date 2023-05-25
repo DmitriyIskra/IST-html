@@ -1708,12 +1708,8 @@ footer .row .footer-info {
     height: 150px
   }
   
-  .item_text {
-    min-height: 155px;
-  }  
+  /* .item_text {
+    min-height: 260px;
+  }   */
 }
-
-
-
-
 
