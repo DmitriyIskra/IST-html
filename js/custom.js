@@ -1,17 +1,17 @@
-
-
 function initSwiper() {
   // три слайда
   var swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 30,
     slidesPerView: 3,
-    centeredSlides: true,
+    centeredSlides: false,
+  	freeMode: true,
+	rewind: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slideToClickedSlide: true,
+    //slideToClickedSlide: true,
   });
   // Большой слайд
   var swiper2 = new Swiper(".mySwiper2", {
@@ -252,66 +252,15 @@ if(document.querySelector(".form-mask")){
   });
 } 
 
-  
-  // Yandex Map
-  if(document.getElementById("map-yandex")){
-  let center = [55.776534451190315,37.54337849781465];
-
-  function init() {
-    let mapIst = new ymaps.Map('map-yandex', {
-      center: center,
-      zoom: 17,
-      controls: []      
-    });
-  
-
-     
-    let placemark1 = new ymaps.Placemark(center, {
-      balloonContent: `
-      <div class="balloon">          
-      <div class="baloon__content">
-      <span>IST TRADE</span>
-      <div class="balloon__address">Хорошeвское ш.32А, <br>этаж 4</div>
-      <img class="map_stars" src="/img/stars.png">        	
-      </div>			  
-      <img class="map_logo" src="/img/map_logo.png"></div>          
-      </div>
-      `
-    }, 
-    {
-      iconLayout: 'default#image',
-      // iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
-      iconImageSize: [40, 40],      
-      iconImageOffset: [-19, -44]
-    });
-  
-
-    mapIst.controls.remove('geolocationControl'); // удаляем геолокацию
-    mapIst.controls.remove('searchControl'); // удаляем поиск
-    mapIst.controls.remove('trafficControl'); // удаляем контроль трафика
-    mapIst.controls.remove('typeSelector'); // удаляем тип
-    mapIst.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    mapIst.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    mapIst.controls.remove('rulerControl'); // удаляем контрол правил
-    mapIst.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-    mapIst.options.set({balloonPanelMaxMapArea:'30%'});
-    mapIst.geoObjects.add(placemark1); 
-    placemark1.balloon.open();
-  }
-  
-  ymaps.ready(init);
-}
-
-  function imageEqualheight() { 
-
-    if(document.querySelector('.description-right')){
-      if(window.screen.width > 560){
-        let productMainIamge = document.querySelector('.product-image-container');
-        let rightContent = document.querySelector('.description-right');    
-        productMainIamge.style.height = rightContent.clientHeight  +'px';
-        console.log(window.clientWidth);
-      }         
-    }    
+  function imageEqualheight() {
+      if(document.querySelector('.description-right')){
+          if(window.screen.width > 560){
+              let productMainIamge = document.querySelector('.product-image-container');
+              let rightContent = document.querySelector('.description-right');
+              productMainIamge.style.height = rightContent.clientHeight  +'px';
+              console.log(window.clientWidth);
+          }
+      }
   }  
 
 
@@ -324,4 +273,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
   divFromTableWmf();
   tabsForSpecifications();
   imageEqualheight();
+initSwiper();
 });
+
+$('#arrFilter_16_2367533627123').on("click load unload", function(){
+  $('.catalog-top-text_clean').remove();
+  console.log("Водоподготовка нажата");
+})
+
+$('#arrFilter_16_326707096123').on("click load unload", function()
+{
+  $('.catalog-top-text_vodo').remove();
+  console.log("Чистящие средства нажаты");
+})
+
+$(window).on('load unload', function(){
+
+  if($('#arrFilter_16_2367533627123').hasClass("active")){    
+    $(".catalog-top-text_clean").remove();    
+    console.log("активна водоподготовка");
+  }
+  
+  if($('#arrFilter_16_326707096123').hasClass("active")){    
+    $(".catalog-top-text_vodo").remove();    
+    $(".catalog-top-text_clean").css("margin-top: -32px");    
+    console.log("активны чистящие средства");
+  }
+})
