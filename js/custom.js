@@ -1,5 +1,5 @@
 function initSwiper() {
-  // три слайда
+  
   var swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 30,
@@ -11,9 +11,9 @@ function initSwiper() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    //slideToClickedSlide: true,
+ 
   });
-  // Большой слайд
+ 
   var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
     spaceBetween: 10,
@@ -58,7 +58,7 @@ if(document.querySelector('.selectpicker') !== null) {
 $('.selectpicker').selectpicker();
 }
 
-/*видео*/
+
 
 $('#exampleModalCenter').on('shown.bs.modal', function (event) {
   $(".myvideo").get(0).currentTime = 0
@@ -273,30 +273,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
   divFromTableWmf();
   tabsForSpecifications();
   imageEqualheight();
-initSwiper();
+  initSwiper();
 });
 
 $('#arrFilter_16_2367533627123').on("click load unload", function(){
-  $('.catalog-top-text_clean').remove();
-  console.log("Водоподготовка нажата");
+  $('.catalog-top-text_clean').remove(); 
 })
 
 $('#arrFilter_16_326707096123').on("click load unload", function()
 {
   $('.catalog-top-text_vodo').remove();
-  console.log("Чистящие средства нажаты");
 })
 
 $(window).on('load unload', function(){
 
   if($('#arrFilter_16_2367533627123').hasClass("active")){    
-    $(".catalog-top-text_clean").remove();    
-    console.log("активна водоподготовка");
+    $(".catalog-top-text_clean").remove();        
   }
   
   if($('#arrFilter_16_326707096123').hasClass("active")){    
     $(".catalog-top-text_vodo").remove();    
-    $(".catalog-top-text_clean").css("margin-top: -32px");    
-    console.log("активны чистящие средства");
+    $(".catalog-top-text_clean").css("margin-top: -32px");        
   }
 })
