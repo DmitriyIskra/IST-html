@@ -1,0 +1,34 @@
+.card-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.slider-prod-card {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.product-slider-img_big {
+    object-fit: contain !important;
+    object-position: center;
+}
+
+.product-right-description {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.product__wr-descr {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.producSL__slides-list {
+    display: flex;
+}
+
+.productSl_slide {
+    width: 33.333%;
+    height: auto;
+}
+/* .product-slider-img */
