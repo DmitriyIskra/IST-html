@@ -21,7 +21,6 @@ ehthumbs.db
 *.mp4
 *.png
 *.svg
-*.jpg
 !/img/icon*
 !/img/icon/*.svg
 !/img/catalog-top-*.jpg

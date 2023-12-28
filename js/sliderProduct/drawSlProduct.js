@@ -174,6 +174,7 @@ export default class DrawSlProduct {
             //  (такое условие в nextPrev)
             // Важно в выражении ниже в prevPrev !!!! offset === 0 !!!! элемент сдвигается на
             // нулевую позицию
+            console.log(offset)
             list.style = `transition: transform ${this.animDur}s ${this.tFunc};
             transform: translateX(${towards}${offset}px);`;
 
