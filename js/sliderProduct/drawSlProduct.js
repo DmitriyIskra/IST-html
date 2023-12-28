@@ -11,11 +11,12 @@ export default class DrawSlProduct {
         // все для большого слайда
         this.wrOfListBig = this.e.querySelector('.producSL__slides-wrapper_big');
         this.listImgBig = this.wrOfListBig.children[0];
-        this.imagesBIg = this.listImgBig.children;
-        this.imageBIg = this.imagesBIg[0].children[0];
+        this.imagesBIg = null;
+        this.imageBIg = null;
         
         // количество превьюшек (картинок)
         this.amountPrev = null;
+        this.amounrBigImg = null;
 
         // ширина превьюшек (картинок) и больших картинок
         this.widthPrev = null;
@@ -25,52 +26,108 @@ export default class DrawSlProduct {
         this.animDur = '0.3';
         this.tFunc = 'linear';
 
+        // индекс текущего активного слайда
+        this.currentBigImg = null;
+        // индекс нового активного слайда
+        this.newBigImg = null;
+
+        // Активный, следующий и предидущий слайды
+        this.activeSlide = null;
+        this.nextSlide = null;
+        this.previousSlide = null;
+
         // Для блокировки накликивания
         this.blocking = false;
+
+        this.counter = 0
     }
 
     // инициализируем слайдер
     initSlider() {
         this.amountPrev = this.previews.length;
 
+        for(let i = 0; i < this.amountPrev; i += 1) {
+
+            // создаем слайды для большого окна с картинкой
+            const path = this.previews[i].children[0].src;
+            const alt = this.previews[i].children[0].alt;
+            const el = this.createBigSlide(path, alt);
+            this.listImgBig.append(el);
+        }
+
+        // Определяем активные слайды
+        this.changeActiveSlides(
+            this.previews[0],
+            this.previews[1], 
+            this.previews[this.amountPrev - 1]
+        )
+        
+        this.imagesBIg = this.listImgBig.children;
+        this.imageBIg = this.imagesBIg[0].children[0];
+        this.amounrBigImg = this.imagesBIg.length;
+
         // Скрываем стрелки если картинок 3 и менее
         if(this.amountPrev <=3) {
             this.rows.forEach( item => item.style.display = 'none');
         }
+
+        // Определяем порядковые номера слайдов
+        this.changeDataNum();
+
+        // индекс текщего активного слайда, при перелистывании
+        // по стрелке происходит переопределение индексов, поэтому это всегда единица
+        this.currentBigImg = +this.previews[0].dataset.numimg;
     }
 
+    // показ большой картинки по выбранной маленькой
     choosePreview(el) {
+        // если значения совпадают значит клик был по тому же элемнту
+        if(this.newBigImg === +el.dataset.numimg) return;
+  
+        this.newBigImg = +el.dataset.numimg;
+        // Вычисляем разницу между активным слайдом и выбранным и их модуль
+        const i = Math.abs(this.newBigImg - +this.currentBigImg);
+        this.widthImgBig = this.culcWidth(this.imageBIg);
+        const offset = i * this.widthImgBig;
 
-        const path = el.src;
-        const alt = el.src;
-
-        this.imageBIg.src = path;
-        this.imageBIg.alt = alt;
+        // устанавливаем transition и сдвигаем
+        setTimeout(() => {
+            this.listImgBig.style = `transition: transform ${this.animDur}s ${this.tFunc};
+            transform: translateX(-${offset}px); `;
+        })
     }
 
     // двигаем превью вправо
+    // Механизм: сначала сдвигаем потом переставляем первую в конец 
+    // и переопределяем атрибуты
     nextPrev() {
         if(this.blocking) return;
 
         this.blocking = true;
+        
+        this.widthPrev = this.culcWidth(this.previews[0]);
 
-        const offset = this.culcWidth();
-
-        this.addTransition(this.listPrev, offset, '-');
-
+        this.addTransition(this.listPrev, this.widthPrev, '-');
         this.deleteTransition(this.listPrev, 'next');
 
-        this.nextBig()
-        
-        setTimeout(() => this.blocking = false, +this.animDur * 1000);
-    }
+        // Сдвигаем большую картинку
+        this.widthImgBig = this.culcWidth(this.imageBIg);
 
-    // двигаем юольшую картинку вправо
-    nextBig() {
-        console.log(+this.previews[0].dataset.numslide + 1)
+        this.addTransition(this.listImgBig, this.widthImgBig, '-');
+        // условие так как навешиваются более одного слушателя
+        // когда это не нужно (когда была выбрана конкрентная картинка
+        // эта функция не нужна все выполняется в первой addTransition)
+        if(this.newBigImg === null) {
+            console.log('add')
+            this.deleteTransition(this.listImgBig, 'next');
+        }
+        setTimeout(() => this.blocking = false, +this.animDur * 1000 + 100);
     }
+    
 
     // двигаем превью влево
+    // Механизм: сначала переставляем последнюю в начало потом сдвигаем
+    // и переопределяем атрибуты
     prevPrev() {
         if(this.blocking) return;
 
@@ -79,49 +136,134 @@ export default class DrawSlProduct {
         this.addTransition(this.listPrev, 0, '');
         this.deleteTransition(this.listPrev);
 
-        setTimeout(() => this.blocking = false, +this.animDur * 1000 + 0.07);
-    }
-
-    // двигаем юольшую картинку влево
-    prevBig() {
-
-    }
-
-    // расчет ширины слайда в моменте
-    culcWidth() {
-        return this.previews[0].offsetWidth + 1;
+        // Сдвигаем большую картинку
+        this.addTransition(this.listImgBig, 0, '');
+        this.deleteTransition(this.listImgBig);
+        
+        
+        setTimeout(() => this.blocking = false, +this.animDur * 1000 + 100);
     }
 
     // offset - величина сдвига
     // towards - направление сдвига, + или -
     addTransition(list, offset, towards) {
-        // для сдвига по prev
+        // для сдвига по prev (подготовка позиции слайда перед сдвигом)
         if(towards !== '-') {
-            const offset = this.culcWidth();
-            const el = this.previews[this.amountPrev - 1];
+            
+            const offset = this.culcWidth(list.children[0]);
+            const el = list.children[list.children.length - 1];
 
-            list.style = `transform: translateX(-${offset}px);`;
+            // Когда this.newBigImg !== null, значит был клик по какой то конкретной
+            // картинке и перед тем как сдвинуть нужно подготовить слайдер
+            // на нужный отступ чтоб подставить в начало нужную картинку
+            if(this.newBigImg !== null) {
+                list.style = `transform: translateX(-${offset * this.newBigImg}px);`;
+            } else {
+                list.style = `transform: translateX(-${offset}px);`;
+            }
+    
             list.prepend(el);
         }
 
         // устанавливаем transition и сдвигаем
         setTimeout(() => {
+            // Когда выбрана конкретная картинка сдвиг будет только у превью, 
+            //  анимация не произойдет потому что this.newBigImg не null
+            // также при next сдвигается только на одну картинку, какая бы картинка
+            //  2 или 3 ни была выбрана
+            //  (такое условие в nextPrev)
+            // Важно в выражении ниже в prevPrev !!!! offset === 0 !!!! элемент сдвигается на
+            // нулевую позицию
             list.style = `transition: transform ${this.animDur}s ${this.tFunc};
-            transform: translateX(${towards}${offset}px); `;
+            transform: translateX(${towards}${offset}px);`;
+
+            // так как в большой картинке при активном втором слайде уже есть сдвиг
+            // на один слайд то анимация не сработает и там перестановка слайда
+            //  переставляем слайд здесь также метод с анимацией заблокирован если
+            // this.newBigImg !== null (такое условие в nextPrev), тогда все становится на свои места
+            if(this.newBigImg !== null && list.matches('.producSL__slides-list_big') && towards === '-') {
+                // когда выбран второй слайд в превью, при клике next нужно сдвигать только слайдер с превью
+                if(this.newBigImg === 2) list.style.transition = '';
+                list.append(list.children[0]);
+                list.style.transform = '';
+
+                // изначально при выборе картинки в превью большой слайдер мы просто 
+                // сдвигаем и не перерисовываем, поэтому при сдвиге слева остаются слайды
+                // при клике next
+                // так как при выбранной 2й картинке мы большой слайдер НЕ СДВИГАЕМ (это происходит 
+                // из за того что если в this.newBigImg !== null функция анимации не будет вызвана в
+                // nextPrev, а также потому что мы задаем if(this.newBigImg === 2)
+                //  list.style.transition = ''; и transition поэтому не срабатывает), а превью
+                // сдвигаем то и получается что все подстраивается, просто удаляется слайд слева
+                // а при 3й выбранной картинке мы большой слайдер СДВИГАЕМ на один
+                //  слайд и просто удаляем картинку слева
+            }
         })
     }
 
     deleteTransition(list, params) {
-        list.addEventListener('transitionend', e => {
-            this.listPrev.style.transition = '';
+
+        list.addEventListener('transitionend', () => {
             
+            list.style.transition = '';
+
             // только для next
             if(params) {
-                list.append(this.previews[0]);
+                list.append(list.children[0]);
             };
 
+            this.newBigImg = null;
             list.style.transform = '';
+
+            // Сохраняем актуальный индекс активного изображения
+            // только для превью
+            if(list.matches('.producSL__slides-list')) {
+                // Определяем активные слайды (active nrxt prev)
+                this.changeActiveSlides(
+                    list.children[0],
+                    list.children[1], 
+                    list.children[list.children.length - 1]
+                );  
+            }
+
+            // Определяем порядковые номера слайдов
+            this.changeDataNum();
         }, {once: true})
+    }
+
+    // culcOffsetSlide(i) {
+    //     return this.widthImgBig * Math.abs(this.currentBigImg - i);
+    // }
+
+    // расчет ширины слайда в моменте
+    culcWidth(el) {
+        return el.offsetWidth;
+    }
+
+    changeActiveSlides(active, next, prev) {
+        if(this.activeSlide && this.nextSlide && this.previousSlide) {
+            this.activeSlide.classList.remove('activePrev')
+            this.nextSlide.classList.remove('nextPrev')
+            this.previousSlide.classList.remove('previousPrev')
+        }
+        
+        this.activeSlide = active;
+        this.nextSlide = next;
+        this.previousSlide = prev;
+        
+        this.activeSlide.classList.add('activePrev');
+        this.nextSlide.classList.add('nextPrev');
+        this.previousSlide.classList.add('previousPrev');
+    }
+
+    changeDataNum() {
+        for(let i = 0; i < this.amountPrev; i += 1) {
+            // добавляем порядковые номера слайдам превью
+            this.previews[i].dataset.numimg = i +  1;
+
+            // создаем слайды для большого окна с картинкой
+            this.imagesBIg[i].dataset.numimg = i +  1;
+        }
     }
 
     // конструктор слайда для большой картинки
@@ -131,7 +273,7 @@ export default class DrawSlProduct {
         wrapper.classList.add('productSl_slide_big');
 
         const image = document.createElement('img');
-        image.classList.add('product-slider-img');
+        image.classList.add('product-slider-img_big');
         image.src = path;
         image.alt = alt;
 

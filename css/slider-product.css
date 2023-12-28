@@ -8,9 +8,17 @@
     margin-right: 0;
 }
 
+.producSL__slides-wrapper_big {
+    height: 600px;
+}
+
+.productSl_slide_big {
+    margin-right: 0 !important;
+}
+
 .product-slider-img_big {
     object-fit: contain !important;
-    object-position: center;
+    object-position: center !important;
 }
 
 .product-right-description {

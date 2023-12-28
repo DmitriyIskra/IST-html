@@ -25,8 +25,8 @@ class ControllSlProduct {
             this.dr.prevPrev();
         }
 
-        if(e.target.matches('.product-slider-img')) {
-            this.dr.choosePreview(e.target);
+        if(e.target.closest('.productSl_slide')) {
+            this.dr.choosePreview(e.target.closest('.productSl_slide'));
         }
     }
 }
