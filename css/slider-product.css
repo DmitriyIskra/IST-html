@@ -4,12 +4,12 @@
 }
 
 .slider-prod-card {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .producSL__slides-wrapper_big {
-    height: 600px;
+    height: 600px !important;
 }
 
 .productSl_slide_big {
@@ -17,26 +17,28 @@
 }
 
 .product-slider-img_big {
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center !important;
 }
 
 .product-right-description {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .product__wr-descr {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .producSL__slides-list {
-    display: flex;
+    display: flex !important;
 }
 
 .productSl_slide {
-    width: 33.333%;
-    height: auto;
+    width: 33.333% !important;
+    height: auto !important;
+
+    border-left: 1px solid #fff !important;
+    border-right: 1px solid #fff !important;
 }
-/* .product-slider-img */

@@ -7,4 +7,4 @@ if(el) {
     const drawSlProduct = new DrawSlProduct(el);
     const controllSlProduct = new ControllSlProduct(drawSlProduct);
     controllSlProduct.init();
-}
+} 

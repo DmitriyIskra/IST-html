@@ -16,7 +16,7 @@ export default class DrawSlProduct {
         
         // количество превьюшек (картинок)
         this.amountPrev = null;
-        this.amounrBigImg = null;
+        this.amountBigImg = null;
 
         // ширина превьюшек (картинок) и больших картинок
         this.widthPrev = null;
@@ -61,14 +61,14 @@ export default class DrawSlProduct {
             this.previews[1], 
             this.previews[this.amountPrev - 1]
         )
-        
+        // Собираем данные о больших картинках
         this.imagesBIg = this.listImgBig.children;
         this.imageBIg = this.imagesBIg[0].children[0];
-        this.amounrBigImg = this.imagesBIg.length;
+        this.amountBigImg = this.imagesBIg.length;
 
         // Скрываем стрелки если картинок 3 и менее
-        if(this.amountPrev <=3) {
-            this.rows.forEach( item => item.style.display = 'none');
+        if(this.amountPrev <= 3) {
+            this.arrows.forEach( item => item.style.display = 'none');
         }
 
         // Определяем порядковые номера слайдов
@@ -118,7 +118,6 @@ export default class DrawSlProduct {
         // когда это не нужно (когда была выбрана конкрентная картинка
         // эта функция не нужна все выполняется в первой addTransition)
         if(this.newBigImg === null) {
-            console.log('add')
             this.deleteTransition(this.listImgBig, 'next');
         }
         setTimeout(() => this.blocking = false, +this.animDur * 1000 + 100);
@@ -174,7 +173,6 @@ export default class DrawSlProduct {
             //  (такое условие в nextPrev)
             // Важно в выражении ниже в prevPrev !!!! offset === 0 !!!! элемент сдвигается на
             // нулевую позицию
-            console.log(offset)
             list.style = `transition: transform ${this.animDur}s ${this.tFunc};
             transform: translateX(${towards}${offset}px);`;
 
